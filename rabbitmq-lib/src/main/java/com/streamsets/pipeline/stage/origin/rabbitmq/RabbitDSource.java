@@ -36,7 +36,6 @@ import com.streamsets.pipeline.lib.rabbitmq.config.Groups;
     onlineHelpRefUrl ="index.html?contextID=task_hrz_mq1_h5"
 )
 @ConfigGroups(value = Groups.class)
-@HideConfigs(value = {"conf.dataFormatConfig.compression"})
 @GenerateResourceBundle
 public class RabbitDSource extends DSourceOffsetCommitter {
 

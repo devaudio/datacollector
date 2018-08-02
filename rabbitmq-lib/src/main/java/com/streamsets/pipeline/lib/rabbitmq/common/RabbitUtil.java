@@ -212,6 +212,10 @@ public final class RabbitUtil {
         conf.queue.properties
     );
 
+    // added for Prefetch
+    channel.basicQos(conf.advanced.rabbitPrefetch, false);
+    channel.basicQos(conf.advanced.rabbitPrefetchChan, true);
+
     for (RabbitExchangeConfigBean exchange : conf.exchanges) {
       bindQueue(channel, conf, exchange);
     }
