@@ -114,8 +114,13 @@ public class RabbitAdvancedConfigBean {
   @ConfigDef(
       required = true,
       type = ConfigDef.Type.NUMBER,
+<<<<<<< HEAD
       label = "Consumer Prefetch Count",
       description = "Maximum number of unacknowledged messages to prefetch for each consumer",
+=======
+      label = "Prefetch Count Consumer",
+      description = "Number of Messages to Prefetch - Per Consumer Limit",
+>>>>>>> 26a0acd0769eaeb4cc6f65a6481200c4e9334d17
       defaultValue = "0",
       displayPosition = 90,
       min = 0,
@@ -126,8 +131,13 @@ public class RabbitAdvancedConfigBean {
   @ConfigDef(
       required = true,
       type = ConfigDef.Type.NUMBER,
+<<<<<<< HEAD
       label = "Channel Prefetch Count",
       description = "Maximum number of unacknowledged messages to prefetch for all consumers on the channel",
+=======
+      label = "Prefetch Count Channel",
+      description = "Number of Messages to Prefetch - Per Channel Limit",
+>>>>>>> 26a0acd0769eaeb4cc6f65a6481200c4e9334d17
       defaultValue = "0",
       displayPosition = 100,
       min = 0,
