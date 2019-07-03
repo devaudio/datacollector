@@ -110,4 +110,29 @@ public class RabbitAdvancedConfigBean {
       group = "#0"
   )
   public int channelMax = ConnectionFactory.DEFAULT_CHANNEL_MAX;
+
+  @ConfigDef(
+      required = true,
+      type = ConfigDef.Type.NUMBER,
+      label = "Consumer Prefetch Count",
+      description = "Maximum number of unacknowledged messages to prefetch for each consumer",
+      defaultValue = "0",
+      displayPosition = 90,
+      min = 0,
+      group = "#0"
+  )
+  public int rabbitPrefetch = 0;
+
+  @ConfigDef(
+      required = true,
+      type = ConfigDef.Type.NUMBER,
+      label = "Channel Prefetch Count",
+      description = "Maximum number of unacknowledged messages to prefetch for all consumers on the channel",
+      defaultValue = "0",
+      displayPosition = 100,
+      min = 0,
+      group = "#0"
+  )
+  public int rabbitPrefetchChan = 0;
+
 }
